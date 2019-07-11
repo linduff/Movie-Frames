@@ -13,13 +13,12 @@ else:
   print('Give input name and output name as arguments\npython frames.py in.mkv out.png')
   exit()
 
-framesize = 1920 * 1080
-
 outpic = []
 
 vidcap = cv2.VideoCapture(vid_name)
 frames_tot = math.floor(vidcap.get(cv2.CAP_PROP_FRAME_COUNT)/24)
 success,image = vidcap.read()
+framesize = math.floor(vidcap.get(cv2.CAP_PROP_FRAME_WIDTH)*vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 count = 1
 r = 0
 g = 0
