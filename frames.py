@@ -24,7 +24,7 @@ r = 0
 g = 0
 b = 0
 
-while count < frames_tot:
+while count < frames_tot-1:
   for i in image:
     for j in i:
       r += j[2]
